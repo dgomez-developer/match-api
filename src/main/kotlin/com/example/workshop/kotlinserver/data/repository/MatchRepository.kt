@@ -1,11 +1,16 @@
 package com.example.workshop.kotlinserver.data.repository
 
 import com.example.workshop.kotlinserver.data.model.Match
-import org.springframework.data.repository.CrudRepository
-import org.springframework.stereotype.Repository
+import org.springframework.data.repository.Repository
 
 /**
- * @author Madrid Tech Lab on 11/11/2018.
+ * @author Madrid Tech Lab on 12/11/2018.
  */
-@Repository
-interface MatchRepository : CrudRepository<Match, String>
+interface MatchRepository : Repository<Match, String> {
+
+    fun findAll(): List<Match>
+
+    fun deleteById(id: String)
+
+    fun save(match: Match): Match
+}
