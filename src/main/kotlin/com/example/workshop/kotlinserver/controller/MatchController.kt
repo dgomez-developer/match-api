@@ -4,10 +4,8 @@ import com.example.workshop.kotlinserver.controller.model.MatchParam
 import com.example.workshop.kotlinserver.controller.model.PlayerParam
 import com.example.workshop.kotlinserver.data.model.Match
 import com.example.workshop.kotlinserver.data.model.Player
-import com.example.workshop.kotlinserver.data.repository.MatchJpaRepository
 import com.example.workshop.kotlinserver.data.repository.MatchRepository
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import javax.servlet.http.HttpServletResponse
