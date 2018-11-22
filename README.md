@@ -34,6 +34,16 @@ docker volume rm $(docker volume ls -q)
 ```bash
 docker network rm $(docker network ls | tail -n+2 | awk '{if($2 !~ /bridge|none|host/){ print $1 }}')
 ```
+
+## How to install mongoDB on mac
+
+```
+brew install mongodb
+mkdir -p /data/db
+sudo chown -R $USER /data/db
+mongod
+```
+
 ## References
 
 * [Hibernate with kotlin](https://kotlinexpertise.com/hibernate-with-kotlin-spring-boot/)
