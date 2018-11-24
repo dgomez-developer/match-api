@@ -74,28 +74,3 @@ Hacer un POST que añada un nuevo partido a un array en memoria
 Ejercicio 4
 
 Crear un Repositorio y mover nuestro array de partidos al repositorio
-
-Ejercicio 5 (Live Demo) Victor
-
-Injectar el Repositorio
-Añadir dependencias JPA
-
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("com.h2database:h2")
-	implementation('com.fasterxml.jackson.module:jackson-module-kotlin')
-
-Crear un Repositorio JPA
-
-Ejercicio 6
-
-Crear un endpoint para borrar partidos
-
-Ejercicio 7 (Live Demo) Debora
-
-Crear local profile y cache profile, y asignarlos a los repositorios correspondientes
-En VM options poner: -Dspring.profiles.active=cache
-
-Ejercicio 8
-
-Crear un mongo repository usando el Dockerfile
-implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.1.0.RELEASE'
