@@ -49,7 +49,7 @@ mongod
 * [Hibernate with kotlin](https://kotlinexpertise.com/hibernate-with-kotlin-spring-boot/)
 * [Accessing data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 * [Dockerize a spring boot app with mong DB](https://www.linkedin.com/pulse/dockerize-spring-boot-mongodb-application-aymen-kanzari/)
-
+* [Mongo Manual]()https://docs.mongodb.com/manual/tutorial/getting-started/)
 
 ## Workshop Exercices (Draft)
 
