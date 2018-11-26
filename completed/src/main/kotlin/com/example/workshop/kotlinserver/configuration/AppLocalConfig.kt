@@ -1,6 +1,6 @@
 package com.example.workshop.kotlinserver.configuration
 
-import com.example.workshop.kotlinserver.data.repository.MatchJpaRepository
+import com.example.workshop.kotlinserver.data.repository.MatchRepository
 import org.springframework.context.annotation.Configuration
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
@@ -13,8 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
  * @author Madrid Tech Lab on 11/11/2018.
  */
 @Configuration
-@EnableJpaRepositories(basePackageClasses = [MatchJpaRepository::class])
-@Profile("local")
+@EnableJpaRepositories(basePackageClasses = [MatchRepository::class])
 class AppLocalConfig {
 
     @Bean

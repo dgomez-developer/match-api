@@ -1,10 +1,13 @@
 package com.example.workshop.kotlinserver.data.repository
 
 import com.example.workshop.kotlinserver.data.model.Match
+import org.springframework.context.annotation.Profile
+import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.repository.CrudRepository
-import org.springframework.data.repository.Repository
+import org.springframework.stereotype.Repository
 
 /**
- * @author Madrid Tech Lab on 12/11/2018.
+ * @author Madrid Tech Lab on 11/11/2018.
  */
-interface MatchRepository : CrudRepository<Match, String>
+@Repository
+interface MatchRepository : JpaRepository<Match, String>
