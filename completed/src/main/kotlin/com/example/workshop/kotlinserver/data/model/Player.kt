@@ -1,7 +1,6 @@
 package com.example.workshop.kotlinserver.data.model
 
 import org.hibernate.annotations.GenericGenerator
-import org.springframework.data.mongodb.core.mapping.Document
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
@@ -10,7 +9,6 @@ import javax.persistence.Id
  * @author Madrid Tech Lab on 10/11/2018.
  */
 @Entity
-@Document(collection = "player")
 data class Player(@Id @GeneratedValue(generator="system-uuid")
                   @GenericGenerator(name="system-uuid", strategy = "uuid")
                   val id: String,
