@@ -1,0 +1,23 @@
+version: '2.1'
+
+services:
+
+  matchapimongodb:
+    image: mongo
+    volumes:
+      - "~/matchapidb:/data/db"
+    networks:
+      - matchapimongo
+
+  matchapispringbootmongo:
+    image: springboot-mongo:latest
+    build: .
+    depends_on:
+      - matchapimongodb
+    ports:
+      - "8080:8080"
+    networks:
+      - matchapimongo
+
+networks:
+  matchapimongo:

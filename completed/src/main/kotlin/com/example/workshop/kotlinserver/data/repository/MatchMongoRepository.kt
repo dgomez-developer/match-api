@@ -10,4 +10,4 @@ import org.springframework.stereotype.Repository
  */
 @Repository
 @Profile("database")
-interface MatchMongoRepository: MongoRepository<Match, String>
+interface MatchMongoRepository: MongoRepository<Match, String>, MatchRepository
