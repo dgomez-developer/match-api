@@ -1,0 +1,41 @@
+# Match API
+
+## Workshop Exercices (Draft)
+
+### Ejercicio 1 (Live Demo): Victor
+
+* Descargar Projecto de SpringInitializer
+* Abrir con Intellij
+* Añadir Server configuration con build
+* Añadir dependencia `implementation('org.springframework.boot:spring-boot-starter-web')` en `build.gradle` y hacer `build`
+* Definir `GET HelloWorld`
+
+### Ejercicio 2 (Coding)
+
+* Hacer un endpoint que te devuelva una lista de partidos.
+* Cada partido se compone de 2 participantes.
+* Cada participante tiene nombre y puntos.
+
+### Ejercicio 3 (Live Demo): Débora
+
+* Hacer un POST que añada un nuevo partido a un array en memoria.
+
+### Ejercicio 4 (Coding)
+
+* Crear un Repositorio.
+* Mover nuestro array de partidos al repositorio.
+
+### Ejercicio 5 (Live Demo): Victor
+
+* Injectar el Repositorio
+* Añadir dependencias JPA
+```
+implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+implementation("com.h2database:h2")
+implementation('com.fasterxml.jackson.module:jackson-module-kotlin')
+```
+* Crear un Repositorio JPA
+
+### Ejercicio 6 (Coding)
+
+* Crear un endpoint para borrar partidos
