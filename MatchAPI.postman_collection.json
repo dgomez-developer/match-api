@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "a171d404-176b-43b1-9322-fa05a8bcb729",
+		"name": "MatchAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Match",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"player1\": { \n\t\t\t\t\t\"name\": \"Pablo\",\n\t\t\t\t\t\"score\": 15\n\t\t\t\t},\n\t\"player2\": {\n\t\t\t\t\t\"name\": \"Sergio\",\n\t\t\t\t\t\"score\": 13\n\t\t\t\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/match",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"match"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Match",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/matches",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"matches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Player",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/match/402881086770f727016770f79a630005",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"match",
+						"402881086770f727016770f79a630005"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
