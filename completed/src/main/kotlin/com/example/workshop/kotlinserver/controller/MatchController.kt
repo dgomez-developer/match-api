@@ -23,8 +23,8 @@ class MatchController {
 
     @PostMapping(value = ["/match"])
     fun createMatch(@RequestBody match: Match, response: HttpServletResponse): Match {
-        val result = matchRepository.save(Match(Player(match.player1.name, match.player1.score),
-                                                Player(match.player2.name, match.player2.score)))
+        matchRepository.save(Match(Player(match.player1.name, match.player1.score),
+                Player(match.player2.name, match.player2.score)))
         response.status = HttpStatus.CREATED.value()
         return match
     }
