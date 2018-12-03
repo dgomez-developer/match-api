@@ -27,14 +27,7 @@ class MatchController {
                     PlayerParam(it.player1.id, it.player1.name, it.player1.score),
                     PlayerParam(it.player2.id, it.player2.name, it.player2.score)) }
     }
-
-    @RequestMapping(method = [RequestMethod.DELETE], value = ["/match/{matchId}"])
-    fun deleteMatch(@PathVariable("matchId", required = true) id: String, response: HttpServletResponse): String {
-        matchRepository.deleteById(id)
-        response.status = HttpStatus.NO_CONTENT.value()
-        return ""
-    }
-
+    
     @RequestMapping(method = [RequestMethod.POST], value = ["/match"])
     fun createMatch(@RequestBody match: MatchParam, response: HttpServletResponse): MatchParam {
         val result = matchRepository.save(Match("",
