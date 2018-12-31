@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2'
 
 services:
 
@@ -10,8 +10,7 @@ services:
       - matchapimongo
 
   matchapispringbootmongo:
-    image: springboot-mongo:latest
-    build: .
+    image: dgomezdeveloper/match-api-springboot-service:firsttry
     depends_on:
       - matchapimongodb
     ports:

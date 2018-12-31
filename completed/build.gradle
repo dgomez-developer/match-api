@@ -37,6 +37,10 @@ compileTestKotlin {
 	}
 }
 
+bootRun {
+	
+}
+
 repositories {
 	mavenCentral()
 }
