@@ -38,7 +38,7 @@ compileTestKotlin {
 }
 
 bootRun {
-	
+    systemProperties System.properties
 }
 
 repositories {
