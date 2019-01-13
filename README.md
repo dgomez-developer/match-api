@@ -1,4 +1,9 @@
 # Match API
+## Running the API locally
+
+### Tools
+- Java: `brew cask install java
+- Intellj (needs JAVA_HOME variable declared in the system PATH)
 
 ## Running mongoDB locally
 
