@@ -1,1 +1,6 @@
-rootProject.name = 'match-api-server'
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'kotlinserver'
