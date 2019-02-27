@@ -1,12 +1,12 @@
-package com.example.workshop.kotlinserver.data.repository
+package com.example.kotlin.demo.server.data.repository
 
-import com.example.workshop.kotlinserver.data.model.Match
+import com.example.kotlin.demo.server.data.model.Match
 import org.springframework.context.annotation.Profile
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 
 /**
- * @author Madrid Tech Lab on 12/11/2018.
+ * @author Madrid Tech Lab on 2019-02-20.
  */
 @Repository
 @Profile("database")
