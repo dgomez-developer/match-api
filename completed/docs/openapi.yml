@@ -1,0 +1,121 @@
+openapi: 3.0.0
+info:
+  description: Api Documentation
+  version: "1.0"
+  title: Api Documentation
+  termsOfService: urn:tos
+  contact:
+    {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0
+tags:
+  - name: match-controller
+    description: Match Controller
+paths:
+  /match:
+    post:
+      tags:
+        - match-controller
+      summary: createMatch
+      operationId: createMatchUsingPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MatchParam"
+        description: match
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            "*/*":
+              schema:
+                $ref: "#/components/schemas/MatchParam"
+        "201":
+          description: Created
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+  "/match/{matchId}":
+    delete:
+      tags:
+        - match-controller
+      summary: deleteMatch
+      operationId: deleteMatchUsingDELETE
+      parameters:
+        - name: matchId
+          in: path
+          description: matchId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            "*/*":
+              schema:
+                type: string
+        "204":
+          description: No Content
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+  /matches:
+    get:
+      tags:
+        - match-controller
+      summary: getAllMatches
+      operationId: getAllMatchesUsingGET
+      responses:
+        "200":
+          description: OK
+          content:
+            "*/*":
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MatchParam"
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+servers:
+  - url: //localhost:8080/
+components:
+  schemas:
+    MatchParam:
+      type: object
+      required:
+        - id
+        - player1
+        - player2
+      properties:
+        id:
+          type: string
+        player1:
+          $ref: "#/components/schemas/PlayerParam"
+        player2:
+          $ref: "#/components/schemas/PlayerParam"
+    PlayerParam:
+      type: object
+      required:
+        - id
+        - name
+        - score
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        score:
+          type: integer
+          format: int32
