@@ -20,6 +20,7 @@ class MatchController {
     @Autowired
     lateinit var matchRepository: MatchRepository
 
+    @CrossOrigin
     @RequestMapping(method = [RequestMethod.GET], value = ["/matches"])
     fun getAllMatches(): List<MatchParam> {
         return matchRepository.findAll().map {
@@ -28,6 +29,7 @@ class MatchController {
                     PlayerParam(it.player2.id, it.player2.name, it.player2.score)) }
     }
 
+    @CrossOrigin
     @RequestMapping(method = [RequestMethod.DELETE], value = ["/match/{matchId}"])
     fun deleteMatch(@PathVariable("matchId", required = true) id: String, response: HttpServletResponse): String {
         matchRepository.deleteById(id)
@@ -35,6 +37,7 @@ class MatchController {
         return ""
     }
 
+    @CrossOrigin
     @RequestMapping(method = [RequestMethod.POST], value = ["/match"])
     fun createMatch(@RequestBody match: MatchParam, response: HttpServletResponse): MatchParam {
         val result = matchRepository.save(Match(

@@ -10,11 +10,12 @@ services:
       - matchapimongo
 
   matchapispringbootmongo:
-    image: dgomezdeveloper/match-api-springboot-service:firsttry
+    build: .
+    #image: dgomezdeveloper/match-api-springboot-service:firsttry
     depends_on:
       - matchapimongodb
     ports:
-      - "8080:8080"
+      - "5000:8080"
     networks:
       - matchapimongo
 
