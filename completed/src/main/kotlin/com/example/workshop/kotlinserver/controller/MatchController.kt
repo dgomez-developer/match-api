@@ -75,7 +75,7 @@ class MatchController {
 
     @CrossOrigin
     @RequestMapping(method = [RequestMethod.GET], value = ["/players"])
-    fun getPlayers(@RequestBody playerParam: PlayerParam): List<PlayerParam> {
+    fun getPlayers(): List<PlayerParam> {
         return usersRepository.findAll().map { PlayerParam(it.id, it.name, it.score) }
     }
 }
